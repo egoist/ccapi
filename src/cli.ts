@@ -3,10 +3,17 @@ import { spawnSync } from "node:child_process"
 import { readFileSync } from "node:fs"
 import { homedir } from "node:os"
 import path from "node:path"
+import { version } from "../package.json"
+
+const args = process.argv.slice(2)
+
+if (args.includes("--version") || args.includes("-v")) {
+  console.log(version)
+  process.exit(0)
+}
 
 const config = loadConfig()
 
-const args = process.argv.slice(2)
 spawnSync("claude", args, {
   env: {
     ...process.env,
