@@ -2,6 +2,12 @@
 
 Use Claude Code with a Claude API compatible endpoint.
 
+## Install
+
+```bash
+npm install -g @egoist/ccapi
+```
+
 ## Why?
 
 I want the `claude` command to always use the Claude subscription, but I also want to use the Claude API for other purposes. This tool allows you to run the `claude` command with a specified API endpoint without changing the default behavior of the `claude` command.
