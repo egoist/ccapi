@@ -1,0 +1,22 @@
+{
+  "name": "@egoist/ccapi",
+  "type": "module",
+  "version": "0.0.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "ccapi": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build ./src/cli.ts --outdir dist --format esm --target node",
+    "prepublishOnly": "bun run build"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "dependencies": {}
+}
