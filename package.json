@@ -1,15 +1,16 @@
 {
   "name": "@egoist/ccapi",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publishConfig": {
     "access": "public"
   },
   "bin": {
-    "ccapi": "dist/cli.js"
+    "ccapi": "cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "cli.js"
   ],
   "scripts": {
     "build": "bun build ./src/cli.ts --outdir dist --format esm --target node",
